@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="CharpZavertailo2.Views.PersonFillInfoView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CharpZavertailo2.Views"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Height="450" Width="400">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="Aquamarine" Offset="0.0" />
+                <GradientStop Color="PaleVioletRed" Offset="0.25" />
+                <GradientStop Color="CornflowerBlue" Offset="0.75" />
+                <GradientStop Color="GreenYellow" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold" Content="Choose your date of birth, please: "></Label>
+        <DatePicker Name="dPick"  Grid.Row="1" SelectedDate="{Binding Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  ></DatePicker>
+        <Label Grid.Row="2" FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold" Content="Name: "></Label>
+        <TextBox Grid.Row="3" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <Label Grid.Row="4" FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold" Content="Surname: "></Label>
+        <TextBox Grid.Row="5" Text="{Binding Surname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <Label Grid.Row="6" FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold" Content="Email: "></Label>
+        <TextBox Grid.Row="7" Text="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <Button Content="Proceed" Grid.Row="8" Height="50" Margin="15,0" Command="{Binding GetInfo}" />
+    </Grid>
+</UserControl>

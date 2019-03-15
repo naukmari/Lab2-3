@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="CharpZavertailo2.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CharpZavertailo2.Views"
+        mc:Ignorable="d"
+         Height="450" Width="400">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="Aquamarine" Offset="0.0" />
+                <GradientStop Color="PaleVioletRed" Offset="0.25" />
+                <GradientStop Color="CornflowerBlue" Offset="0.75" />
+                <GradientStop Color="GreenYellow" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Content="Name: " FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"></Label>
+        <TextBlock Grid.Row="0" Grid.Column ="1" FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"   Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"></TextBlock>
+        <Label Grid.Row="1" Content="Surname: " FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"></Label>
+        <TextBlock Grid.Row="1" Grid.Column ="1" FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"  Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"></TextBlock>
+        <Label Grid.Row="2" Content="Email: " FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"></Label>
+        <TextBlock Grid.Row="2" Grid.Column ="1" FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"  Text="{Binding Email, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"></TextBlock>
+        <Label Grid.Row="3" Content="Birth date: " FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"></Label>
+        <TextBlock Grid.Row="3" Grid.Column ="1" FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"  Text="{Binding BDay, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"></TextBlock>
+        <Label Grid.Row="4" Content="Are you adult? " FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"></Label>
+        <TextBlock Grid.Row="4" Grid.Column ="1" FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"   Text="{Binding IsAdult, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"></TextBlock>
+        <Label Grid.Row="5" Content="Sun sign: " FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"></Label>
+        <TextBlock Grid.Row="5" Grid.Column ="1" FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"   Text="{Binding SunSign, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"></TextBlock>
+        <Label Grid.Row="6" Content="Chinese sign: " FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"></Label>
+        <TextBlock Grid.Row="6" Grid.Column ="1" FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold" Text="{Binding ChineseSign, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"></TextBlock>
+        <Label Grid.Row="7" Content="Birthday today? " FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"></Label>
+        <TextBlock Grid.Row="7" Grid.Column ="1" FontSize="20" Foreground="White" FontStyle="Italic" FontWeight="Bold"  Text="{Binding IsBirthday, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"></TextBlock>
+        <Button Content="Try again" Grid.Row="8" Grid.ColumnSpan="2"  Command="{Binding TryAgain}" />
+
+    </Grid>
+</UserControl>
